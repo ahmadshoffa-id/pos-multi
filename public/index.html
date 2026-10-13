@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>POS SaaS - Multi Store</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<!-- HALAMAN LOGIN -->
+<div id="loginPage" class="login-wrap hidden">
+  <div class="login-card">
+    <h1>🛒 POS SaaS</h1>
+    <p class="muted">Point of Sale Multi-Store untuk UMKM & Retail</p>
+    <div class="form-row"><label>Username</label><input id="loginUser" placeholder="mis. owner"></div>
+    <div class="form-row"><label>Password</label><input id="loginPass" type="password" placeholder="admin123"></div>
+    <button id="btnLogin" class="btn primary full">Masuk</button>
+    <p id="loginErr" class="err"></p>
+    <p class="muted small">Demo: superadmin / owner / admin / kasir1 / akunting — password <b>admin123</b></p>
+  </div>
+</div>
+
+<!-- APLIKASI -->
+<div id="appPage" class="hidden">
+  <aside class="sidebar">
+    <div class="brand">🛒 POS<span>SaaS</span></div>
+    <nav id="navMenu"></nav>
+    <div class="sidebar-foot">
+      <div id="whoami" class="muted small"></div>
+      <button id="btnLogout" class="btn sm danger ghost">Keluar</button>
+    </div>
+  </aside>
+  <main class="main">
+    <header class="topbar">
+      <h2 id="pageTitle">Dashboard</h2>
+      <div class="topbar-right">
+        <select id="storeSelect" class="input"></select>
+        <span id="tenantBadge" class="badge"></span>
+      </div>
+    </header>
+    <section id="content" class="content"></section>
+  </main>
+</div>
+
+<!-- MODAL -->
+<div id="modal" class="modal hidden"><div class="modal-box">
+  <div class="modal-head"><h3 id="modalTitle"></h3><button class="btn sm ghost" onclick="closeModal()">✕</button></div>
+  <div id="modalBody" class="modal-body"></div>
+  <div class="modal-foot"><button class="btn ghost" onclick="closeModal()">Batal</button>
+  <button id="modalSave" class="btn primary">Simpan</button></div>
+</div></div>
+
+<div id="toast" class="toast hidden"></div>
+
+<script src="js/app.js"></script>
+</body>
+</html>
